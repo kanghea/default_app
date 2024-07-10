@@ -13,14 +13,15 @@ export default function HomeScreen() {
   const handleLogin = () => {
     if (username === 'user' && password === 'pass') {
       Alert.alert('Login Successful', `Welcome, ${username}!`);
+      
     } else {
       Alert.alert('Login Failed', 'Invalid username or password');
     }
   };
 
   return (
-    
-      <ThemedView style={styles.outerContainer}>
+
+      <View style={styles.outerContainer}>
         <ThemedView style={styles.innerContainer}>
           <ThemedText type="title">모두의족보</ThemedText>
           <ThemedText type="subtitle" style={styles.subtitle}>
@@ -49,7 +50,7 @@ export default function HomeScreen() {
             <Button title="Login" onPress={handleLogin} />
           </View>
         </ThemedView>
-      </ThemedView>
+      </View>
   );
 }
 
